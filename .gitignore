@@ -1,0 +1,6 @@
+node_modules/
+yodit.db
+yodit.db-wal
+yodit.db-shm
+.enx
+*.log
