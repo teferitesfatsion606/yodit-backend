@@ -1,0 +1,20 @@
+app = "yodit-backend"
+primary_region = "ams"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[env]
+  JWT_SECRET = "yodit-super-secret-key-change-in-production-2024"
+  ADMIN_EMAIL = "admin@yodit.app"
+  ADMIN_PASSWORD = "Admin@Yodit2024!"
+  PORT = "3000"
+[mounts]
+  source = "yodit_data"
+  destination = "/app"
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
